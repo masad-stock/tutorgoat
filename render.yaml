@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: tutorgoat-backend
+    env: node
+    plan: starter
+    buildCommand: npm install && cd client && npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+      - key: MONGODB_URI
+        sync: false
+      - key: EMAIL_USER
+        sync: false
+      - key: EMAIL_PASS
+        sync: false
+      - key: EMAIL_FROM
+        value: noreply@tutorgoat.com
+      - key: INTERNAL_EMAIL
+        value: admin@tutorgoat.com
+      - key: JWT_SECRET
+        sync: false
+      - key: CLIENT_URL
+        value: https://tutorgoat.onrender.com
