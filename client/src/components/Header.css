@@ -1,0 +1,100 @@
+.site-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e7e7e7;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.site-header .logo img {
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border: 2px solid #e9ecef;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.site-header .logo img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.site-header .main-nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.site-header .main-nav ul li {
+  margin-left: 20px;
+}
+
+.site-header .main-nav ul li a,
+.site-header .main-nav ul li button {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+  font-family: inherit;
+  padding: 0;
+}
+
+.site-header .main-nav ul li a:hover,
+.site-header .main-nav ul li button:hover {
+  color: #007bff;
+}
+
+.theme-toggle-container {
+  margin-left: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Dark mode styles */
+[data-theme="dark"] .site-header {
+  background-color: #1a1a1a;
+  border-bottom-color: #333;
+}
+
+[data-theme="dark"] .site-header .main-nav ul li a,
+[data-theme="dark"] .site-header .main-nav ul li button {
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .site-header .main-nav ul li a:hover,
+[data-theme="dark"] .site-header .main-nav ul li button:hover {
+  color: #60a5fa;
+}
+
+[data-theme="dark"] .site-header .logo img {
+  border-color: #4a5568;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .site-header .logo img:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Mobile responsiveness for theme toggle */
+@media (max-width: 768px) {
+  .theme-toggle-container {
+    margin-left: 0.5rem;
+  }
+}

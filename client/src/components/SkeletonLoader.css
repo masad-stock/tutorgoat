@@ -1,0 +1,118 @@
+.skeleton-container {
+  width: 100%;
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+  border-radius: 4px;
+}
+
+.skeleton-text {
+  border-radius: 4px;
+}
+
+.skeleton-input {
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.skeleton-textarea {
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.skeleton-button {
+  border-radius: 8px;
+}
+
+.skeleton-image {
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.skeleton-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+.skeleton-form {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 1rem;
+}
+
+.skeleton-testimonial {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.skeleton-testimonial::before {
+  content: '"';
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  font-size: 2rem;
+  color: #e0e0e0;
+  font-family: serif;
+}
+
+.skeleton-content {
+  margin-top: 1rem;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Dark mode styles */
+[data-theme="dark"] .skeleton {
+  background: linear-gradient(90deg, #2d3748 25%, #4a5568 50%, #2d3748 75%);
+  background-size: 200% 100%;
+}
+
+[data-theme="dark"] .skeleton-card {
+  background: #1a1a2e;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .skeleton-form {
+  background: #1a1a2e;
+}
+
+[data-theme="dark"] .skeleton-testimonial {
+  background: #1a1a2e;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .skeleton-testimonial::before {
+  color: #4a5568;
+}
+
+[data-theme="dark"] .skeleton-input,
+[data-theme="dark"] .skeleton-textarea {
+  border-color: #4a5568;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .skeleton-card,
+  .skeleton-form,
+  .skeleton-testimonial {
+    padding: 1rem;
+  }
+}
